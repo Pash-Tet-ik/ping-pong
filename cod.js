@@ -13,18 +13,16 @@ var shdy=3
 var colorid = ["#ff0000","#ffa500","#ffd800"," #008000","#0000ff"," #4b0082","#ee82ee"]
 var colorch = 0
 
-
 function keybordup(){
-    if(event.keyCode=="87" || event.keyCode=="83"){
+    if(event.which==83||event.which==87){
         tdy=0
     }
 }
-
 function keybordpress(){
-    if(event.keyCode=="87"){
+    if(event.which==119){
         tdy=-5
     }
-    else if(event.keyCode=="83"){
+    else if(event.which==115){
         tdy=5
     }
 }
