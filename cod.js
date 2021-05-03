@@ -15,16 +15,16 @@ var colorch = 0
 
 
 function keybordup(){
-    if((event.key=="w" || event.key=="W"||event.key=="s" || event.key=="S")){
+    if(event.keyCode=="87" || event.keyCode=="83"){
         tdy=0
     }
 }
 
 function keybordpress(){
-    if(event.key=="w" || event.key=="W"){
+    if(event.keyCode=="87"){
         tdy=-5
     }
-    else if(event.key=="s" || event.key=="S"){
+    else if(event.keyCode=="83"){
         tdy=5
     }
 }
