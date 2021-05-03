@@ -14,15 +14,17 @@ var colorid = ["#ff0000","#ffa500","#ffd800"," #008000","#0000ff"," #4b0082","#e
 var colorch = 0
 
 function keybordup(){
+    console.log('keyCode: ', event.which);
     if(event.which==83||event.which==87){
         tdy=0
     }
 }
-function keybordpress(){
-    if(event.which==119){
+function keyborddown(){
+    console.log('keyCode: ', event.which);
+    if(event.which==87){
         tdy=-5
     }
-    else if(event.which==115){
+    else if(event.which==83){
         tdy=5
     }
 }
@@ -80,5 +82,5 @@ function cl(){
 
 setInterval(run, 10)
 
-document.addEventListener('keypress',keybordpress)
+document.addEventListener('keydown',keyborddown)
 document.addEventListener('keyup',keybordup)
