@@ -1,6 +1,8 @@
 var canvas = document.getElementById("myCanvas")
 var ctx = canvas.getContext("2d")
 
+alert("W - вверх S - вниз")
+
 var score = 0 //счёт
 var s=0 //буфер
 var tx=5 //положение пластины x
@@ -53,7 +55,7 @@ function draw(){
 //смэрц
 function lose(){
     shx=20
-    shy=Math.random()*canvas.height
+    shy=(Math.random()*canvas.height-10)
     shdy=(Math.random()-0.5)*7
     shdx=3
     score = 0
@@ -96,7 +98,7 @@ function run(){
     if (shx<4 && shdx != 0){
         shdx=0
         shdy=0
-        setTimeout(lose,1500)
+        setTimeout(lose,1000)
 //радуга
     }
     if (colorch >= 9){
