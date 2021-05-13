@@ -12,7 +12,7 @@ var shx=16 //положение шара x
 var shy=Math.random()*canvas.height //положение шара y
 var shdx=2 //скорость шара x
 var shdy=(Math.random()-0.5)*8 //скорость шара y
-var colorid = ["#ff0000","#d84b20","#ffd800","#96fa00"," #008000","#42aaff","#0000ff"," #4b0082","#ee82ee"] //радуга
+var colorid = ["#ff0000","#d84b20","#EC9210","#ffd800","#CBE900","#96fa00","#4BBD00","#008000","#219580","#42aaff","#0000ff","#2600C1","#4b0082","#9D41B8","#ee82ee","#F74177"] //радуга
 var colorch = 0 //цикл радуги
 var textlosesize = canvas.width/8 + "px Tahoma" //шрифт
 
@@ -55,7 +55,7 @@ function draw(){
 //смэрц
 function lose(){
     shx=20
-    shy=(Math.random()*canvas.height-10)
+    shy=Math.random()*canvas.height
     shdy=(Math.random()-0.5)*7
     shdx=3
     score = 0
@@ -98,15 +98,15 @@ function run(){
     if (shx<4 && shdx != 0){
         shdx=0
         shdy=0
-        setTimeout(lose,1000)
+        setTimeout(lose,1500)
 //радуга
     }
-    if (colorch >= 9){
+    if (colorch >= colorid.length){
             colorch = 0
     }
 
     draw()
-}s
+}
 
 setInterval(run, 9)
 
