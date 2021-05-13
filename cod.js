@@ -88,7 +88,7 @@ function run(){
     }
 //отскок от пластины
     if (shx<16 && shx>16+1.4*shdx && shy>ty-2 && shy<ty+102){
-        shdx=-1.15*shdx
+        shdx=-1.1*shdx
         shdy=shdy+(tdy/10)
         shdy=shdy+Math.random()-0.5
         score = score+1
